@@ -1,0 +1,24 @@
+{
+  "name": "lambda_wallet",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "electron": "^1.8.4",
+    "foreman": "^2.0.0",
+    "react-scripts": "1.1.1"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
+  "homepage": "./",
+  "main": "src/main.js",
+  "scripts": {
+    "dev" : "nf start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
