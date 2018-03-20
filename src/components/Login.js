@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {
   Input,
   Form,
@@ -6,24 +7,55 @@ import {
   Button
 } from 'semantic-ui-react';
 
-export default class Login extends Component {
+import { setPublicKey } from '../actions/wallet';
+
+class Login extends Component {
+  state = {
+    username: '',
+    password: ''
+  }
+
   render() {
     return (
       <Container>
         <Form>
           <Form.Field>
-            <Input placeholder="Username" />
+            <Input placeholder="Username" onChange={(e, data) => this.setState({ username: data.value })} />
           </Form.Field>
 
           <Form.Field>
-            <Input placeholder="Password" />
+            <input className="ui input" type="password" placeholder="Password" onChange={(e) => this.setState({ password: e.target.value })} />
           </Form.Field>
 
           <Form.Field>
-            <Button as='a'>Log in</Button>
+            <Button as='a' onClick={this._handleClick}>Log in</Button>
           </Form.Field>
         </Form>
       </Container>
     );
   }
+
+  _handleClick = () => {
+    fetch("http://localhost:4000/api/login", {
+      method: "POST",
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      credentials: 'omit',
+      body: JSON.stringify(this.state)
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (Object.keys(data).includes("errors")) {
+        //
+      } else {
+        this.props.setPublicKey(data.public_key);
+      }
+    });
+  }
 }
+
+export default connect(null, dispatch => ({
+  setPublicKey: p => dispatch(setPublicKey(p))
+}))(Login);
