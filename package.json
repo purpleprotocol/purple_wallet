@@ -8,14 +8,19 @@
     "react-scripts": "1.1.1"
   },
   "dependencies": {
+    "found": "^0.3.8",
+    "phoenix": "^1.3.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "semantic-ui-react": "^0.79.0"
   },
   "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
   "homepage": "./",
   "main": "src/main.js",
   "scripts": {
-    "dev" : "nf start",
+    "dev": "nf start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
