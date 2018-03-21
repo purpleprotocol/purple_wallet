@@ -1,11 +1,13 @@
 const defaultState = {
-  publicKey: null
+  wallets: []
 }
 
 export default function(state = defaultState, action) {
   switch (action.type) {
-    case 'SET_PUBLIC_KEY':
-      return Object.assign({}, state, { publicKey: action.publicKey });
+    case 'ADD_WALLET':
+      return Object.assign({}, state, { wallets: state.wallets.concat(action.wallet) });
+    case 'SET_WALLETS':
+      return Object.assign({}, state, { wallets: action.wallets });
     default:
       return state;
   }

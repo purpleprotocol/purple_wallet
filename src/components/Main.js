@@ -8,14 +8,14 @@ class Main extends Component {
   render() {
     return (
       <Container>
-        Pub key: { this.props.publicKey }
+        Wallets: { this.props.wallets.map(w => <div>{w}</div>) }
       </Container>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  publicKey: state.wallet.publicKey
+  wallets: state.wallet.wallets
 })
 
 export default connect(mapStateToProps, null)(Main);

@@ -3,17 +3,37 @@ import { connect } from 'react-redux';
 
 import Main from '../components/Main';
 import Login from '../components/Login';
+import { setWallets } from '../actions/wallet';
+
 
 class MainPage extends Component {
-  render() {
-    const { publicKey } = this.props;
+  componentWillMount() {
+    fetch("http://localhost:4000/api/fetch-sessions", {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    })
+    .then(response => response.json())
+    .then(data => {
+      this.props.setWallets(JSON.parse(data.sessions));
+    });
+  }
 
-    return publicKey ? <Main /> : <Login />;
+  render() {
+    const { wallets } = this.props;
+
+    return wallets.length ? <Main /> : <Login />;
   }
 }
 
 const mapStateToProps = state => ({
-  publicKey: state.wallet.publicKey
+  wallets: state.wallet.wallets
 })
 
-export default connect(mapStateToProps, null)(MainPage);
+const mapDispatchToProps = dispatch => ({
+  setWallets: w => dispatch(setWallets(w))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainPage);

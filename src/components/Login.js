@@ -7,7 +7,7 @@ import {
   Button
 } from 'semantic-ui-react';
 
-import { setPublicKey } from '../actions/wallet';
+import { addWallet } from '../actions/wallet';
 
 class Login extends Component {
   state = {
@@ -42,7 +42,6 @@ class Login extends Component {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      credentials: 'omit',
       body: JSON.stringify(this.state)
     })
     .then(response => response.json())
@@ -50,12 +49,12 @@ class Login extends Component {
       if (Object.keys(data).includes("errors")) {
         //
       } else {
-        this.props.setPublicKey(data.public_key);
+        this.props.addWallet(data.public_key);
       }
     });
   }
 }
 
 export default connect(null, dispatch => ({
-  setPublicKey: p => dispatch(setPublicKey(p))
+  addWallet: p => dispatch(addWallet(p))
 }))(Login);
