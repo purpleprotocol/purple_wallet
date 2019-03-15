@@ -1,0 +1,10 @@
+.form-inputs{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em 0;
+}
+
+#main-wrapper > * {
+    margin: 1.5em 0;
+}

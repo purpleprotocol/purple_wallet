@@ -1,5 +1,176 @@
+/* PURPLE MAIN COLOR: #6A32B4*/
+/*TODO use .less and variables for 270px for instance and colors*/
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../src/themes/default/assets/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+#root{
+  font-family: 'Open Sans';
+  color: #3C436C;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.fee{
+  color: #5BA5F3;
+}
+
+.icon-with-space{
+  padding: 75px 50px;
+}
+
+#root .ui.container{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.center-content{
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-transfer{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dashboard-transfer .dashboard-transfer-inputs{
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboard-transfer .dashboard-transfer-inputs > div{
+  max-width: 270px;
+ }
+
+#dashboard-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+#dashboard-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+#dashboard-wrapper #dashboard-left{
+  padding: 20px 0px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  max-width: 200px;
+  background: #EDEDF5;
+  justify-content: space-between;
+}
+
+#dashboard-wrapper #dashboard-right{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#dashboard-wrapper #dashboard-right .menu{
+  margin-bottom: 0px !important;
+}
+
+#dashboard-wrapper #dashboard-right .menu a{
+  font-size: 18px;
+  padding: 25px 40px;
+  color: #3C436C;
+}
+
+#dashboard-wrapper #dashboard-right h2{
+  text-align: center;
+}
+
+#dashboard-wrapper #dashboard-right .menu .active.item{
+  background-color: #EDEDF5;
+  border-color: transparent;
+  font-weight: 400;
+  /* border-color: #6A32B4; */
+}
+
+#dashboard-wrapper .dashboard-wallets{
+  padding-top: 50px;
+}
+
+#dashboard-wrapper .wallet-logo{
+  padding-bottom: 10px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.medium-size{
+  max-width: 400px;
+}
+
+.large-size{
+  max-width: 550px;
+  width: 550px !important;
+}
+
+#root .ui.dropdown, #root .ui.input, #root input{
+  width: 270px;
+  background: #F6F6F9 !important;
+  border-radius: 7px;
+  border-width: 0px;
+}
+
+#main-wrapper .ui.input{
+  width: 270px;
+}
+
+/*#main-wrapper */#root .purple-button{
+  background-color: #6A32B4;
+  color: white;
+  border-radius: 7px;
+  font-weight: 300;
+  width: 200px;
+  padding: 15px 0;
+}
+
+#main-wrapper .ui.input input, #main-wrapper .field input, #main-wrapper .purple-input{
+  background: #F6F6F9;
+  border-radius: 7px;
+  border-width: 0px;
+}
+
+.center-text{
+  text-align: center;
+}
+
+#main-wrapper .image-circle{
+  border: 2px solid #EDEDF5;
+  margin-bottom: 100px;
+}
+
+#main-wrapper h2{
+  margin: 0px;
+}
+
 .App {
   text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 .App-logo {
@@ -25,6 +196,11 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.fit-screen{
+  width: 100%;
+  height: 100%;
 }
 
  /*

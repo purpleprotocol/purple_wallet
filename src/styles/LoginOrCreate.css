@@ -1,0 +1,14 @@
+#main-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main-wrapper > * {
+    margin: 1.25em 0;
+}
+
+.divider{
+    width: 400px;
+}

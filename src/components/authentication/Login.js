@@ -7,7 +7,7 @@ import {
   Button
 } from 'semantic-ui-react';
 
-import { addWallet } from '../actions/wallet';
+import { addWallet } from './../../actions/wallet';
 
 class Login extends Component {
   state = {
