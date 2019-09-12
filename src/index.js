@@ -13,8 +13,6 @@ import {
   Route,
 } from 'found';
 
-/* ... */
-
 const BrowserRouter = createBrowserRouter({
   routeConfig: makeRouteConfig(
     <Route

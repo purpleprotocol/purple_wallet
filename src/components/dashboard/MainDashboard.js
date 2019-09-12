@@ -5,30 +5,52 @@ import Logo2 from '../../test_logo_2.png'
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Button, Image, Menu } from 'semantic-ui-react'
+import './../../styles/custom/Dashboard.css'
 import Transfer from './menus/Transfer.js'
 import Exchange from './menus/Exchange.js'
 import Dashboard from './menus/Dashboard.js'
 import ExploreBlockchain from './menus/ExploreBlockchain.js'
+import Badge from './../../controls/Badge.js'
 
 class MainDashboard extends Component {
     componentWillMount() {
 
-        this.setState({ wallets: [{ icon: Logo1, key: '1' }, { icon: Logo2, key: '2' }], activeMenuItem: strings.menu.transfer });
+        this.setState({ wallets: [{ icon: Logo1, key: '1' }, { icon: Logo2, key: '2' }], activeMenuItem: strings.menu.transfer, activeMenu: 'main' });
+    }
+
+    getBadgeProperties = (key, icon) => {
+        return {
+            key,
+            id: 'badge_' + key,
+            clickHandler: this.handleBadgeClick,
+            icon: icon
+        }
+    }
+
+    handleBadgeClick = (e) => {
+        const targetId = e.target.id;
+        if (targetId === 'badge_main') {
+            this.setState({ activeMenu: 'main' });
+        } else if (targetId === 'badge_settings') {
+            this.setState({ activeMenu: 'settings' });
+        } else {
+            this.setState({ activeMenu: 'wallet' });
+        }
     }
 
     handleItemClick = (e, { name }) => this.setState({ activeMenuItem: name })
 
     render() {
         return (<Container>
-            <div id='dashboard-wrapper'>
+            <div id='dashboard-wrapper' className='fit-screen'>
                 <div id='dashboard-left'>
                     <div>
-                        <Image className='main-logo' src={Logo} size='tiny' circular />
+                        <Badge {...this.getBadgeProperties('main', Logo)} />
                         <div className='dashboard-wallets'>
-                            {this.state.wallets.map(w => <Image className='wallet-logo' src={w.icon} key={w.key} size='tiny' circular />)}
+                            {this.state.wallets.map(w => <Badge {...this.getBadgeProperties(w.key, w.icon)} />)}
                         </div>
                     </div>
-                    <Button circular icon='setting' size='massive' basic />
+                    <Badge {...this.getBadgeProperties('settings', Logo)} />
                 </div>
                 <div id='dashboard-right'>
                     <Menu pointing secondary>

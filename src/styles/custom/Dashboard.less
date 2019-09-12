@@ -1,0 +1,59 @@
+@import './Variables.less';
+#root {
+    #dashboard-wrapper {
+        display: flex;
+        flex-direction: row;
+        #dashboard-left {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            max-width: 200px;
+            background: #EDEDF5;
+            justify-content: space-between;
+        }
+        #dashboard-right {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .menu .active.item {
+                background-color: @active-item-color;
+                border-color: transparent;
+                font-weight: 400 // border-color: @purple-color; 
+            }
+            h2 {
+                text-align: center;
+            }
+        }
+        .dashboard-wallets {
+            padding-top: 40px;
+        }
+        .badge-circle {
+            padding-bottom: 10px;
+            cursor: pointer;
+            border-radius: 50px;
+            background-color: transparent;
+            padding: 10px;
+        }
+        #dashboard-right .menu {
+            margin-bottom: 0px !important;
+        }
+        #dashboard-right .menu a {
+            font-size: 18px;
+            padding: 25px 40px;
+            color: @purple-color-text;
+        }
+    }
+    .dashboard-transfer {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        .dashboard-transfer-inputs {
+            display: flex;
+            flex-direction: row;
+        }
+        .dashboard-transfer-inputs>div {
+            max-width: @standard-input-middle-width;
+        }
+    }
+}

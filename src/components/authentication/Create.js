@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import Logo from '../../logo.png'
 import { connect } from 'react-redux';
 import { Container, Button, Form, Checkbox, Input, Image } from 'semantic-ui-react'
-import './../../styles/LoginOrCreate.css'
-import './../../styles/Create.css'
+import './../../styles/custom/LoginOrCreate.css'
+import './../../styles/custom/Create.css'
 
 class Create extends Component {
     render() {

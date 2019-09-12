@@ -1,0 +1,69 @@
+/* Remark: Use this file as a global intended styling mechanism */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../../src/themes/default/assets/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+/* Colors */
+/* Buttons */
+/* Inputs */
+#root {
+  /* Main overriding for the entire application's styling*/
+  color: #3C436C;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 100% !important;
+  height: 100% !important;
+}
+#root .ui.container {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#root .ui.dropdown,
+#root .ui.input,
+#root input {
+  width: 270px;
+  background: #F6F6F9 !important;
+  border-radius: 7px;
+  border-width: 0px;
+}
+#root .purple-button {
+  background-color: #6A32B4;
+  color: white;
+  border-radius: 7px;
+  font-weight: 300;
+  width: 200px;
+  padding: 15px 0;
+}
+#root .fee {
+  color: #5BA5F3;
+}
+#root .dropdown .menu {
+  background-color: #F6F6F9;
+  outline: 0;
+}
+#root #main-wrapper .ui.input {
+  width: 270px;
+}
+#root #main-wrapper .ui.input input,
+#root #main-wrapper .field input,
+#root #main-wrapper .purple-input {
+  background: #F6F6F9;
+  border-radius: 7px;
+  border-width: 0px;
+}
+#root #main-wrapper .image-circle {
+  border: 2px solid #EDEDF5;
+  margin-bottom: 100px;
+}
+#root #main-wrapper h2 {
+  margin: 0px;
+}
+/*# sourceMappingURL=App.css.map */

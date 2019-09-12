@@ -3,11 +3,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Button, Form, Dropdown, Input, Icon } from 'semantic-ui-react'
 
-const aog = [{
-    text: "sagsaasg",
-    value: "asgaag"
-}];
-
 const fakeAccounts = [{ text: "XeZRRZ50jbYEd0hpaIv2", value: "XeZRRZ50jbYEd0hpaIv2" },
 { text: " mYTZRyAQHsXyE85pfvAT ", value: " mYTZRyAQHsXyE85pfvAT " },
 { text: " tlpef8k2y2snPD8snQoA ", value: " tlpef8k2y2snPD8snQoA " },

@@ -1,0 +1,63 @@
+/* Remark: Use this file as a global intended styling mechanism */
+
+@import './Variables.less';
+#root {
+    /* Main overriding for the entire application's styling*/
+    color: @purple-color-text;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100% !important;
+    height: 100% !important;
+    .ui.container {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .ui.dropdown,
+    .ui.input,
+    input {
+        width: @standard-input-middle-width;
+        background: @standard-input-background-color  !important;
+        border-radius: 7px;
+        border-width: 0px;
+    }
+    .purple-button {
+        background-color: @purple-button-background;
+        color: @purple-button-color;
+        border-radius: 7px;
+        font-weight: 300;
+        width: 200px;
+        padding: 15px 0;
+    }
+    .fee {
+        color: @fee-color;
+    }
+    .dropdown .menu{
+        background-color: @standard-input-background-color;
+        outline: 0;
+    }
+    #main-wrapper {
+        .ui.input {
+            width: @standard-input-middle-width;
+        }
+        .ui.input input,
+        .field input,
+        .purple-input {
+            background: @standard-input-background-color;
+            border-radius: 7px;
+            border-width: 0px;
+        }
+        .image-circle {
+            border: 2px solid #EDEDF5;
+            margin-bottom: 100px;
+        }
+        h2 {
+            margin: 0px;
+        }
+    }
+}

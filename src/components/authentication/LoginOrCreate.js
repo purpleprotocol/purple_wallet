@@ -4,7 +4,7 @@ import Logo from '../../logo.png'
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Button, Divider, Image } from 'semantic-ui-react'
-import './../../styles/LoginOrCreate.css'
+import './../../styles/custom/LoginOrCreate.css'
 
 class LoginOrCreate extends Component {
     render() {

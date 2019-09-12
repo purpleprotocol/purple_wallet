@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "concurrently": "^4.1.0",
     "electron": "^1.8.4",
     "foreman": "^2.0.0",
+    "less": "^3.9.0",
+    "less-watch-compiler": "^1.13.0",
     "react-scripts": "1.1.1"
   },
   "dependencies": {
@@ -21,7 +24,8 @@
   "main": "src/main.js",
   "scripts": {
     "dev": "nf start",
-    "start": "react-scripts start",
+    "dev-start": "concurrently --kill-others \"less-watch-compiler --config less-watcher.config.json\" \"react-scripts start\"",
+    "start": "concurrently --kill-others \"less-watch-compiler --config less-watcher.config.json\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

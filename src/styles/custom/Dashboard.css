@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../../src/themes/default/assets/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+/* Colors */
+/* Buttons */
+/* Inputs */
+#root #dashboard-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+#root #dashboard-wrapper #dashboard-left {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  max-width: 200px;
+  background: #EDEDF5;
+  justify-content: space-between;
+}
+#root #dashboard-wrapper #dashboard-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#root #dashboard-wrapper #dashboard-right .menu .active.item {
+  background-color: #EDEDF5;
+  border-color: transparent;
+  font-weight: 400;
+}
+#root #dashboard-wrapper #dashboard-right h2 {
+  text-align: center;
+}
+#root #dashboard-wrapper .dashboard-wallets {
+  padding-top: 40px;
+}
+#root #dashboard-wrapper .badge-circle {
+  padding-bottom: 10px;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: transparent;
+  padding: 10px;
+}
+#root #dashboard-wrapper #dashboard-right .menu {
+  margin-bottom: 0px !important;
+}
+#root #dashboard-wrapper #dashboard-right .menu a {
+  font-size: 18px;
+  padding: 25px 40px;
+  color: #3C436C;
+}
+#root .dashboard-transfer {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+#root .dashboard-transfer .dashboard-transfer-inputs {
+  display: flex;
+  flex-direction: row;
+}
+#root .dashboard-transfer .dashboard-transfer-inputs > div {
+  max-width: 270px;
+}
+/*# sourceMappingURL=Dashboard.css.map */
